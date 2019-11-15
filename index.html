@@ -1,0 +1,63 @@
+<style>
+    #header {
+        width: 70vw;
+        display: block;
+        margin: auto;
+    }
+    #svgHolder {
+        position:relative;
+        margin-top: 10vh;
+        margin-bottom: 20vh;
+        height:80vh
+
+    }
+    #ringOut{
+        
+        left: calc(50vw - 40vh);
+        width: 80vh;
+        position: absolute;
+        margin: auto;
+        transform: rotate(0deg);
+        cursor: pointer;
+    }
+    #ringIn{
+        top:6vh;
+        left: calc(50vw - 40vh + 6vh);
+        width: 68vh;
+        position: absolute;
+        margin: auto;
+        pointer-events: none;
+    }
+    #keyArea{
+        position: absolute;
+        top: 40vh;
+        left: 45vw;
+        font-size: 5vh;
+        font-weight: bold;
+    }
+    #key{
+        display: inline;
+    }
+
+</style>
+<html>
+<head>
+    <title>Crypto Math</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img id="header" src="./img/header.svg">
+
+    <div id="svgHolder">
+        <img id="ringOut" draggable="false" src="./img/ring.svg">
+        <img id="ringIn" draggable="false" src="./img/ring.svg">
+        <div id="keyArea">
+            Key: <div contenteditable= true id='key'>0</div>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="script.js"></script>
