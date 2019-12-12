@@ -11,7 +11,6 @@ var last = 'encrypt'
 spin = window.setInterval(function(){
     seg = 360 / 26
     offsetAngle += seg 
-    offsetAngle %= 360
     setAngle(offsetAngle, true, .5)  
     updateKey()
 }, 500);
@@ -70,6 +69,7 @@ function setAngle(angle, transition = false, length = 1){
 }
 
 $("#ringOut").mousedown(function(){
+    offsetAngle %= 360
     window.clearTimeout(spin)
     ringBox = $(this)[0].getBoundingClientRect()
     ringCenter = {x: ringBox.x + .5*ringBox.width,
