@@ -17,7 +17,7 @@ spin = window.setInterval(function(){
 
 function updateKey(){
     key = (26 + Math.floor((offsetAngle + resAngle + .5 * seg) / seg)) % 26
-    $('#key').val(key)
+    $('#key').val((key > 9? '':'  ') + key)
     textUpdate()
 }
 

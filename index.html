@@ -3,58 +3,16 @@
         font-family: 'Gelasio', serif;
     }
     #header {
-        width: 70vw;
+        width: 65vw;
         display: block;
         margin: auto;
     }
-    #svgHolder {
-        position:relative;
-        margin-top: 10vh;
-        margin-bottom: 20vh;
-        height:80vh
-
-    }
-    #ringOut{
-        
-        left: calc(50vw - 40vh);
-        width: 80vh;
+    #caesar{
+        height: 10vw;
+        width: 30vw;
         position: absolute;
-        margin: auto;
-        transform: rotate(0deg);
-        cursor: pointer;
-    }
-    #ringIn{
-        top:6vh;
-        left: calc(50vw - 40vh + 6vh);
-        width: 68vh;
-        position: absolute;
-        margin: auto;
-        pointer-events: none;
-    }
-    #keyArea{
-        position: absolute;
-        top: 28.3vw;
-        left: 48.6vw;
-    }
-    #key{
-        font-size: 3vw;
-        width: 4vw;
-        height: 3.5vw;
-        
-    }
-    .row{
-        margin-top: -15vh;
-
-    }
-    .column {
-        float: left;
-        width: 50%;
-        font-size: 4.5vh;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    .textEntry{
-        font-size: 3vh;
+        top: 35vw;
+        left: 15vw;
     }
 
 </style>
@@ -66,24 +24,7 @@
 </head>
 <body>
     <img id="header" src="./img/header.svg">
-        <div id="keyArea">
-            <input type="text" id="key">
-        </div>
-    <div id="svgHolder">
-        <img id="ringOut" draggable="false" src="./img/ringOut.svg">
-        <img id="ringIn" draggable="false" src="./img/ringIn.svg">
-    </div>
-    <div class="row">
-        <div class="column">
-            <div>Enter Message to be encoded:</div>
-            <textarea rows = "8" cols = "40" name = "encrypt" id = 'encrypt' spellcheck="false" class="textEntry">Message In</textarea>
-        </div>
-        <div class="column">
-            <div>Decoded:</div>
-            <textarea rows = "8" cols = "40" name = "decrypt" id='decrypt' spellcheck="false" class="textEntry">Message out</textarea>
-
-        </div>
-    </div>
+    <a href='/ceasar/' id = 'caesar'></a>
     
 </body>
 </html>

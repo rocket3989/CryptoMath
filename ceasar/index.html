@@ -1,0 +1,90 @@
+<style>
+    body{
+        font-family: 'Gelasio', serif;
+    }
+    #header {
+        width: 65vw;
+        display: block;
+        margin: auto;
+    }
+    #svgHolder {
+        position:relative;
+        margin-top: 10vh;
+        margin-bottom: 20vh;
+        height:80vh
+
+    }
+    #ringOut{
+        
+        left: calc(50vw - 40vh);
+        width: 80vh;
+        position: absolute;
+        margin: auto;
+        transform: rotate(0deg);
+        cursor: pointer;
+    }
+    #ringIn{
+        top:6vh;
+        left: calc(50vw - 40vh + 6vh);
+        width: 68vh;
+        position: absolute;
+        margin: auto;
+        pointer-events: none;
+    }
+    #keyArea{
+        position: absolute;
+        top: 26.2vw;
+        left: 48.6vw;
+    }
+    #key{
+        font-size: 3vw;
+        width: 4vw;
+        height: 3.5vw;
+        
+    }
+    .row{
+        margin-top: -15vh;
+
+    }
+    .column {
+        float: left;
+        width: 50%;
+        font-size: 4.5vh;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .textEntry{
+        font-size: 3vh;
+    }
+
+</style>
+<html>
+<head>
+    <title>Crypto Math</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href='../'><img id="header" src="./img/header.svg"></a>
+    <div id="keyArea">
+        <input type="text" id="key">
+    </div>
+    <div id="svgHolder">
+        <img id="ringOut" draggable="false" src="./img/ringOut.svg">
+        <img id="ringIn" draggable="false" src="./img/ringIn.svg">
+    </div>
+    <div class="row">
+        <div class="column">
+            <div>Enter Message to be encoded:</div>
+            <textarea rows = "8" cols = "40" name = "encrypt" id = 'encrypt' spellcheck="false" class="textEntry">Message In</textarea>
+        </div>
+        <div class="column">
+            <div>Decoded:</div>
+            <textarea rows = "8" cols = "40" name = "decrypt" id='decrypt' spellcheck="false" class="textEntry">Message out</textarea>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="script.js"></script>
